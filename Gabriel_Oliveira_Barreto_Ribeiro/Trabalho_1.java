@@ -1,4 +1,4 @@
-public class trabalho_1 {
+public class Trabalho_1 {
     public static void main(String[] args) {
         double[] notasBigData = {8.0, 9.0, 8.6, 9.2, 7.0};
         double[] notasLogica = {7.1, 6.0, 7.2, 5.2, 7.4};
