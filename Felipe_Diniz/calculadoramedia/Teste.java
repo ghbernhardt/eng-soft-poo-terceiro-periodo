@@ -1,9 +1,7 @@
-import java.util.*;
-import java.lang.*;
-import java.io.*;
+
 
 // The main method must be in a class named "Main".
-class Main {
+class Teste {
     public static void main(String[] args) {
         double[][] notas = {
             {8.0, 9.0, 8.6, 9.2, 7.0},
