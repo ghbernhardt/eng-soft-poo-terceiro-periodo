@@ -1,26 +1,47 @@
 package Gabriel_José;
 
+import java.util.Scanner;
+
 public class Calculadora {
     public static void main(String[] args) {
-        float[][] notas = {
-            {8.0f, 9.0f, 8.6f, 9.2f, 7.0f},
-            {7.1f, 6.0f, 7.2f, 5.2f, 7.4f}
-        };
+        Scanner scanner = new Scanner(System.in);
 
-        //Armazenamento de média em array
-        float[] medias = new float[2];
+        System.out.print("Digite o primeiro número: ");
+        double num1 = scanner.nextDouble();
 
-        //Cálculo de médias
-        for (int i = 0; i < notas.length; i++) {
-            float soma = 0.0f;
-            for (int j = 0; j < notas[i].length; j++) {
-                soma += notas[i][j];
-            }
-            medias[i] = soma / notas[i].length;
+        System.out.print("Digite o operador (+, -, *, /): ");
+        char operator = scanner.next().charAt(0);
+
+        System.out.print("Digite o segundo número: ");
+        double num2 = scanner.nextDouble();
+
+        double result = 0.0;
+
+        switch (operator) {
+            case '+':
+                result = num1 + num2;
+                break;
+            case '-':
+                result = num1 - num2;
+                break;
+            case '*':
+                result = num1 * num2;
+                break;
+            case '/':
+                if (num2 != 0) {
+                    result = num1 / num2;
+                } else {
+                    System.out.println("Não é possível dividir por zero.");
+                    System.exit(1);
+                }
+                break;
+            default:
+                System.out.println("Operador inválido.");
+                System.exit(1);
         }
 
-        for (int i = 0; i < medias.length; i++) {
-            System.out.println("A " + (i + 1) + "ª média é: " + medias[i]);
-        }
+        System.out.println("Resultado: " + result);
+
+        scanner.close();
     }
 }
