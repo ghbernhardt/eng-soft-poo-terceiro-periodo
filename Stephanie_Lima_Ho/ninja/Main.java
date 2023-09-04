@@ -1,3 +1,5 @@
+package Stephanie_Lima_Ho.ninja;
+
 public class Main {
     public static void main(String[] args) {
       
@@ -17,5 +19,5 @@ public class Main {
             secondNinja.cla = "Lima";
             secondNinja.nomeJutso = "StephanieLinda";
             secondNinja.show();
-    }          
+    }     
 }

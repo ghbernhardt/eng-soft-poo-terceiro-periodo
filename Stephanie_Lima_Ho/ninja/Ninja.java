@@ -1,6 +1,7 @@
-public class Ninja {
+package Stephanie_Lima_Ho.ninja;
 
-     String nome;
+public class Ninja {
+    String nome;
      int idade;
      String aldeia;
      String cla;
@@ -14,5 +15,4 @@ public class Ninja {
     void realizarJutso(){
         System.out.println(nome.concat(" realizar jutso ").concat(nomeJutso));
     }
-    
 }
