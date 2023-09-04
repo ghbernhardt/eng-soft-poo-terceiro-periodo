@@ -1,4 +1,4 @@
- package Johnny_Gilli.aula05;
+package aula05;
 
 import java.util.Scanner;
 
