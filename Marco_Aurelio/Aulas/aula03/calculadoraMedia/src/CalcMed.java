@@ -1,4 +1,4 @@
-public class VetorMulti {
+public class CalcMed {
 
     public static void main(String[] args) {
         double[][] x = {
