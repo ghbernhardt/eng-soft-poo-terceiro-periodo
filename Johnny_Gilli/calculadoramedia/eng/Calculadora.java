@@ -1,4 +1,4 @@
-package Johnny_Gilli.calculadoramedia.eng;
+package calculadoramedia.eng;
 
 public class Calculadora {
     public static void main(String[] args) {
