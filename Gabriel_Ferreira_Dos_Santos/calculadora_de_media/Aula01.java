@@ -1,4 +1,4 @@
-package calculadorademedia;
+package calculadora_de_media;
 
 
 public class Aula01 {
