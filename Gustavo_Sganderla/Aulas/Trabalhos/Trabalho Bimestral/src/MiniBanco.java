@@ -10,13 +10,13 @@ public class MiniBanco {
             System.out.println("1. Criar uma conta");
             System.out.println("2. Fazer login");
             System.out.println("3. Creditar saldo");
-            System.out.println("4. Consultar boleto");
-            System.out.println("5. Pagar boleto");
+            System.out.println("4. Pagar boleto");
+            System.out.println("5. Consultar saldo");
             System.out.println("6. Sair");
             System.out.print("Escolha uma opção: ");
 
             int opcao = scanner.nextInt();
-            scanner.nextLine(); // Consumir a nova linha
+            scanner.nextLine(); 
 
             switch (opcao) {
                 case 1:
@@ -65,17 +65,12 @@ public class MiniBanco {
                     }
                     break;
                 case 4:
-                    // Implemente a funcionalidade de consultar boleto aqui
-                    System.out.println("Funcionalidade de consulta de boleto não implementada.");
-                    break;
-                case 5:
                     if (conta == null) {
                         System.out.println("Você precisa criar uma conta primeiro.");
                     } else {
                         System.out.print("Informe a linha digitável do boleto: ");
                         String linhaDigitavel = scanner.nextLine();
                         boolean pagamentoSucesso = conta.pagarBoleto(linhaDigitavel);
-
                         if (pagamentoSucesso) {
                             System.out.println("Boleto pago com sucesso!");
                         } else {
@@ -83,11 +78,19 @@ public class MiniBanco {
                         }
                     }
                     break;
+                    case 5:
+                    if (conta == null) {
+                        System.out.println("Você precisa criar uma conta primeiro.");
+                    } else {
+                        double saldo = conta.consultarSaldo();
+                        System.out.println("Saldo atual: " + saldo);
+                    }
+                    break;
                 case 6:
                     System.out.println("Obrigado por usar o Mini Banco Digital!");
                     System.exit(0);
                 default:
-                    System.out.println("Opção inválida.");
+                      System.out.println("Opção inválida.");
             }
         }
     }

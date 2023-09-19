@@ -42,7 +42,7 @@ public class Conta {
 
     private double calcularValorBoleto(String linhaDigitavel) {
         
-        String valorBoletoStr = linhaDigitavel.substring(37);
+        String valorBoletoStr = linhaDigitavel.substring(37, 45);
 
         try {
            
@@ -52,5 +52,19 @@ public class Conta {
           
             return 0.0;
         }
+    }
+    public boolean pagamentoSucesso(String linhaDigitavel) {
+        double valorBoleto = calcularValorBoleto(linhaDigitavel);
+        
+        if (linhaDigitavel.length() == 48 && saldo >= valorBoleto) {
+            saldo -= valorBoleto;
+            return true;
+        }
+        
+        return false;
+    }
+
+    public double consultarSaldo() {
+        return saldo;
     }
 }
