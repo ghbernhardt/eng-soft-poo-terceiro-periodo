@@ -13,7 +13,7 @@ public class Main {
         //Imprime a fraseEscolha;
         System.out.println(fraseEscolha);    
         
-        //"Le o próximo número inteiro (a escolha do usuário) 
+        //"Lé o próximo número inteiro (a escolha do usuário) 
         //fornecido pelo usuário na linha de comando e armazena-o na variável escolha."
         int escolha = input.nextInt();
 

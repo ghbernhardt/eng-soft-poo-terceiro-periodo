@@ -13,7 +13,7 @@ public class Calculadora {
             escolha = input.nextInt(); 
 
                     if(escolha == 5){
-                        return;
+                        break;
                     }
 
                 System.out.println("Digite o primeiro valor:");
@@ -46,6 +46,7 @@ public class Calculadora {
                         System.out.println("resultado "+res);
                         System.out.println("-----------------------------------");
                 }
+             
                 
             }
 }
