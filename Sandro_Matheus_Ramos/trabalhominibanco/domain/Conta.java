@@ -1,29 +1,26 @@
-package Joao_Pedro_Lima_Rodrigues.miniBanco;
+package Sandro_Matheus_Ramos.trabalhominibanco.domain;
 
 public class Conta {
-
+    
     private String documento;
+
     private String nome;
-    private Double saldo;
+
     private String telefone;
+
     private String email;
+
     private String senha;
 
-    public Conta(String documento, String senha, String nome, String telefone, String email) {
+    private Double saldo;
+
+    public Conta(String documento, String nome, String telefone, String email, String senha) {
         this.documento = documento;
-        this.senha = senha;
-        this.saldo = 0d;
         this.nome = nome;
         this.telefone = telefone;
         this.email = email;
-    }
-
-    public void creditarSaldo(Double valor){
-        this.saldo = saldo + valor;
-    }
-
-    public void debitarSaldo(Double valor){
-        this.saldo = saldo - valor;
+        this.senha = senha;
+        this.saldo = 0d;
     }
 
     public String getDocumento() {
@@ -45,13 +42,22 @@ public class Conta {
     public String getSenha() {
         return senha;
     }
+
     public Double getSaldo() {
         return saldo;
     }
 
+    public void realizarEntrada(Double valor) {
+        this.saldo = this.saldo + valor;
+    }
+
+    public void realizarSaida(Double valor) {
+        this.saldo = this.saldo - valor;
+    }
+
     @Override
     public String toString() {
-        return "Conta [documento=" + documento + ", senha=" + senha + "]";
+        return "Conta [documento=" + documento + ", nome=" + nome + "]";
     }
 
 }
