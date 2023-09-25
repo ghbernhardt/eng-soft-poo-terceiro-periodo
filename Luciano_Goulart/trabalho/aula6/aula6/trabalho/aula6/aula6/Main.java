@@ -6,17 +6,11 @@ import java.util.Scanner;
 
 class Conta {
     private String documento;
-    private String nome;
-    private String telefone;
-    private String email;
     private String senha;
     private double saldo;
 
     public Conta(String documento, String nome, String telefone, String email, String senha) {
         this.documento = documento;
-        this.nome = nome;
-        this.telefone = telefone;
-        this.email = email;
         this.senha = senha;
         this.saldo = 500.0; // Saldo inicial de R$ 500
     }
