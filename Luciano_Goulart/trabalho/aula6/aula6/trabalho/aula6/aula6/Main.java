@@ -1,4 +1,4 @@
-package aula6;
+package trabalho.aula6.aula6;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -6,17 +6,11 @@ import java.util.Scanner;
 
 class Conta {
     private String documento;
-    private String nome;
-    private String telefone;
-    private String email;
     private String senha;
     private double saldo;
 
     public Conta(String documento, String nome, String telefone, String email, String senha) {
         this.documento = documento;
-        this.nome = nome;
-        this.telefone = telefone;
-        this.email = email;
         this.senha = senha;
         this.saldo = 500.0; // Saldo inicial de R$ 500
     }
@@ -189,21 +183,21 @@ public class Main {
                                 case 1:
                                 System.out.print("Digite o número do boleto: ");
                                 String numeroBoleto = scanner.nextLine();
-                                
+
                                 // Crie um boleto com o número digitado e o valor fixo de R$ 400.0
                                 Boleto boleto = new Boleto(numeroBoleto);
                                 boletos.put(numeroBoleto, boleto);
-                                
+
                                 System.out.println("Conta de luz");
                                 System.out.println("Vencimento: 10/10/2023");
                                 System.out.println("Valor: R$" + boleto.getValor());
                                 break;
-                            
+
                             case 2:
                                 System.out.print("Digite o número do boleto a pagar: ");
                                 String numeroBoletoPagar = scanner.nextLine();
                                 Boleto boletoPagar = boletos.get(numeroBoletoPagar);
-                                
+
                                 if (boletoPagar != null) {
                                     if (contaLogada.debitarSaldo(boletoPagar.getValor())) {
                                         boletoPagar.pagar();
