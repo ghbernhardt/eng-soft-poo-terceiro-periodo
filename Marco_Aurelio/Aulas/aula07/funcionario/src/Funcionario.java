@@ -56,4 +56,5 @@ public class Funcionario {
         }
         return soma / getSalario().length;
     }
+  
 }
