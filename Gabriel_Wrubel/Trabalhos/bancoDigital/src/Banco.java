@@ -5,17 +5,17 @@ import java.util.Scanner;
 
 public class Banco {
 
-    private static List<Conta> contas = new ArrayList<>();
+    private static List<Main> contas = new ArrayList<>();
 
-    public static List<Conta> getContas() {
+    public static List<Main> getContas() {
         return contas;
     }
 
-    public static void setContas(List<Conta> contas) {
+    public static void setContas(List<Main> contas) {
         Banco.contas = contas;
     }
 
-    public static void abrirConta(Scanner scanner, List<Conta> contas) {
+    public static void abrirConta(Scanner scanner, List<Main> contas) {
         System.out.println("Para a abertura de conta, forneça os seguintes itens:");
         System.out.println("Digite seu nome completo:");
         String nome = scanner.nextLine();
@@ -31,12 +31,12 @@ public class Banco {
         double saldo = scanner.nextDouble();
         scanner.nextLine();
 
-        Conta novaConta = new Conta(nome, documento, tel, email, senha, saldo);
+        Main novaConta = new Main(nome, documento, tel, email, senha, saldo);
         contas.add(novaConta);
 
     }
 
-    public static void fazerLogin(Scanner scanner, List<Conta> contas) {
+    public static void fazerLogin(Scanner scanner, List<Main> contas) {
         System.out.println("Área de login:");
         System.out.println("Digite seu login (documento):");
         String login = scanner.nextLine();
@@ -49,7 +49,7 @@ public class Banco {
         } else {
             boolean loginSucesso = false;
             boolean sairLogin = false;
-            for (Conta contaAtual : contas) {
+            for (Main contaAtual : contas) {
                 if (contaAtual.getDocumento().equals(login) && contaAtual.getSenha().equals(senhaTeste)) {
                     System.out.println("------------------------------------");
                     System.out.println("Bem-vindo " + contaAtual.getNome());
