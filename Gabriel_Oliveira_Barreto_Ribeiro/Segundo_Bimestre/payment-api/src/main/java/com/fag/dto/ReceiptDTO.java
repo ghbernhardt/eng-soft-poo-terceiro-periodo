@@ -3,21 +3,24 @@ package com.fag.dto;
 public class ReceiptDTO {
 
     private String receiptData;
-    private String receiptFormatted;
-    
+
+    private String receiptformatted;
+
     public String getReceiptData() {
         return receiptData;
     }
-    public String getReceiptFormatted() {
-        return receiptFormatted;
-    }
+
     public void setReceiptData(String receiptData) {
         this.receiptData = receiptData;
     }
-    public void setReceiptFormatted(String receiptFormatted) {
-        this.receiptFormatted = receiptFormatted;
+
+    public String getreceiptformatted() {
+        return receiptformatted;
     }
 
-    
-    
+    public void setreceiptformatted(String receiptformatted) {
+        this.receiptformatted = receiptformatted;
+    }
+
+
 }
