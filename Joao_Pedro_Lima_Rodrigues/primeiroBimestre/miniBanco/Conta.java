@@ -1,4 +1,4 @@
-package miniBanco;
+package Joao_Pedro_Lima_Rodrigues.miniBanco;
 
 public class Conta {
 

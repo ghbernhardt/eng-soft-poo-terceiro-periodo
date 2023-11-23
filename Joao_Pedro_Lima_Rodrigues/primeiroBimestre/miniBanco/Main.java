@@ -1,4 +1,4 @@
-package miniBanco;
+package Joao_Pedro_Lima_Rodrigues.miniBanco;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -90,7 +90,7 @@ public class Main {
 
         while (escolha != '5') {
 
-            System.out.println("Olá " + conta.getDocumento()
+            System.out.println("Olá " + conta.getNome()
                     + " Digite a opção desejada:\n [1] - Consultar Saldo\n [2] - Creditar conta\n [3] - Consultar boleto \n [4] - Realizar Pagamento\n [5] Sair");
             escolha = input.next().charAt(0);
 
