@@ -7,6 +7,13 @@ public class TokenDTO {
     @JsonbProperty("access_token")
     private String accessToken;
 
+    //Não vai ser usado;
+    // @JsonbProperty("expires_in")
+    // private String expiresIn;
+
+    // @JsonbProperty("token_type")
+    // private String tokenType;
+
     public String getAccessToken(){
         return accessToken;
     }
